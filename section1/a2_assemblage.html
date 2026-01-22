@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+#bluemat {
+    width:400px;
+    height:400px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url('assemblage/hearts_bg_blue.jpeg');
+    position: absolute;
+    transform: rotate(5deg);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#book {
+    width:350px;
+    height:500px;
+    top: 300px;
+    right: 8%;
+    background-color: #1c5f36;
+    position: absolute;
+    transform: rotate(140deg);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#booktitle-container {
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 24%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+#cord {
+    position: absolute;
+    top: 350px;
+    /* https://stackoverflow.com/questions/26575797/css-is-it-possible-to-make-an-element-look-like-a-sine-cosine-function */
+}
+
+#plate-base {
+    background-color: rgb(168, 207, 130);
+    width:480px;
+    height: 480px;
+    border-radius: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(199, 228, 171);
+    box-shadow: -5px 8px 5px rgba(0, 0, 0, 0.3);
+}
+#plate-inner {
+    background-color: rgb(150, 192, 108);
+    width:440px;
+    height: 440px;
+    border-radius: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#charger-object {
+    width:70px;
+    height:200px;
+    background-color: rgb(235, 234, 200);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    transform: rotate(-20deg);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#charger-object::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(67, 67, 67);
+    top: 150px;     /* adjust vertical position */
+    left: 0;
+}
+
+#charger-serial {
+    width:20px;
+    height:100px;
+    background-color: rgb(119, 122, 114);
+    border-radius: 5px;
+    top: 30px;
+    left: 25px;
+    position: absolute;
+}
+
+#charger-text {
+    transform: rotate(90deg);
+    width: 150px;
+    font-size: 4px;
+    position: absolute;
+    top: 90px;
+    left: -18px;   
+}
+
+#charger-text2 {
+    transform: rotate(90deg);
+    width: 150px;
+    font-size: 4px;
+    position: absolute;
+    top: 90px;
+    left: -60px;   
+}
+
+#charger-plug1 {
+    width:9px;
+    height:20px;
+    background-color: rgb(232, 232, 232);
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(107, 107, 107);
+    top: 160px;
+    left: 16px;
+    position: absolute;
+}
+
+
+#charger-plug2 {
+    width:9px;
+    height:20px;
+    background-color: rgb(232, 232, 232);
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(107, 107, 107);
+    top: 160px;
+    left: 44px;
+    position: absolute;
+}
+
+
+.card{
+    width: 110px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    border-radius: 15px;
+    transform: rotate(5deg);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+    top: 300px;
+    left: 200px;
+}
+
+#joker {
+    transform: rotate(-10deg);
+}
+
+#hiddencard1 {
+    transform: rotate(2deg);
+}
+
+#card6 {
+    transform: rotate(3deg);
+}
+#hiddencard2 {
+    transform: rotate(4deg);
+}
+
+#card2 {
+    transform: rotate(4deg);
+}
+
+
+#palette-board {
+    width: 320px;
+    height: 220px;
+    background-color: #dbb27a;
+    position: absolute;
+    top: -20px;
+    left: 100px;
+    border-radius: 2px;
+    transform: rotate(-10deg);
+    box-shadow: -15px 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+#palette-topslats {
+    width: 300px;
+    height: 90px;
+    position: absolute;
+    top: 10px;
+    border-radius: 2px;
+    background:
+        repeating-linear-gradient(
+            to right,
+            #dbb27a 0,
+            #dbb27a 30px,
+            rgb(86, 97, 79) 30px,
+            rgb(86, 97, 79) 50px
+        )
+}
+
+#palette-bottomslats {
+    width: 300px;
+    height: 90px;
+    position: absolute;
+    top: 115px;
+    border-radius: 2px;
+    background:
+        repeating-linear-gradient(
+            to right,
+            #dbb27a 0,
+            #dbb27a 30px,
+            rgb(86, 97, 79) 30px,
+            rgb(86, 97, 79) 50px
+        )
+}
+
+#n_holder {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120px;
+    color: rgb(247, 113, 2);
+    text-shadow: -4px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: rotate(-15deg);
+}
+
+#o_holder {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 110px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110px;
+    color: rgb(247, 113, 2);
+    text-shadow: -4px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: rotate(-10deg);
+}
+
+#exclamation {
+      width: 0;
+      height: 0;
+      border-left: 80px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 250px solid rgb(133, 0, 0);
+      position: absolute;
+      top: -20px;
+      right: 0px;
+      transform: rotate(-15deg);
+}
+
+#basket {
+    width: 100px;
+    height: 85px;
+    border-radius: 60px;
+    position: absolute;
+    background: 
+        linear-gradient(127deg, 
+            black 3%,
+            rgb(96, 47, 16) 97%);
+    border-color: rgb(96, 47, 16);
+    border-width: 6px;
+    border-style: solid;
+    transform: rotate(-45deg);
+    right: 10px;
+    top: 185px;
+    box-shadow: -15px 5px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+#bottlebase {
+    width: 80px;
+    height: 180px;
+    background-color: rgb(25, 10, 15);
+    border-radius: 80px;
+    position: absolute;
+    bottom: 130px;
+    right: 170px;
+    transform: rotate(-130deg);
+    box-shadow: -5px -15px 5px rgba(0, 0, 0, 0.3);
+}
+
+#bottle-label {
+    width: 80px;
+    height: 160px;
+    background-color: rgb(201, 200, 200);
+    border-radius: 40px;
+    position: absolute;
+    top: 15px;
+}
+
+#bottle-rest {
+    width: 80px;
+    height: 100px;
+    background-color: rgb(25, 10, 15);
+    border-radius: 40px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#bottle-cap {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(201, 200, 200);
+    border-radius: 40px;
+    position: absolute;
+    bottom: -30px;
+    transform: rotate(90deg);
+    font-size: smaller;
+}
+
+
+.shifted-text {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+</style>
+
+
+
+<div id="wrapper"> <!-- START CSS STILL LIFE - All HTML should be contained within this wrapper -->
+    <div id="bluemat"></div>
+
+    <div id="cord"></div> 
+
+    <div id="takeoutbag"></div>
+
+    <div id="book">
+        <div id="booktitle-container"> I do<br>Keep<br>Trying</div>
+    </div>
+
+    <div id="plate-base"> 
+        <div id="plate-inner"></div>
+
+        <div id="charger-object">
+            <div id="charger-serial"> </div>
+            <div id="charger-text">
+            I am a tiny little text bit of text on a charger, and you cannot see what I say. <br>
+            I don't say much of interest probably, but who knows, I might contain secrets..<br>
+            </div>
+            <div id="charger-text2">
+            For example, I might tell you that I have always loved you. I might tell you <br>
+            That I think of you every time I eat a mango and let it drip down my chin.<br>
+            </div>
+
+            <div id="charger-plug1"></div>
+            <div id="charger-plug2"></div>
+        </div>
+
+
+        <div id="card-container">
+            <div id="joker" class="card"> 
+                <p style='top:5px'> JoKeR</p>
+            </div>
+            <div id="hiddencard1" class="card"></div>
+            <div id="card6" class="card"> 
+                <p style='top:0px'> 6<br>&#x2666;</p>
+            </div>
+            <div id="hiddencard2" class="card"></div>
+            <div id="card2" class="card"> 
+                <p style='top:0px'> 2<br>&#9829;</p>
+            </div>
+        </div>
+
+
+        <div id="palette-board">
+   
+            <div id="palette-topslats"></div>
+            <div id="palette-bottomslats"></div>
+
+            <div id="n_holder">n</div>
+            <div id="o_holder">o</div>
+            <div id="exclamation"></div>
+
+        </div>
+
+        <div id="basket"></div>
+
+    </div>      
+
+    <div id="bottlebase">
+        <div id="bottle-label"></div>
+        <div id="bottle-rest"></div>
+        <div id="bottle-cap"><span class="shifted-text">fUn<br>jUicE</span></div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+                                
+
+
+</html>
