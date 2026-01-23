@@ -11,6 +11,48 @@
   overflow: hidden;
 }
 
+#takeoutbag {
+    width:500px;
+    height:300px;
+    top: -130px;
+    right: 60px;
+    border-radius: 30px;
+    background:
+        repeating-linear-gradient(transparent, #f2f2f0, rgb(200,200,200) 3px),
+        repeating-linear-gradient(0.25turn, transparent, #f2f2f0, rgb(200,200,200) 3px);    position: absolute;
+    transform: rotate(7deg);
+    box-shadow: -4px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+#takeoutbag_top {
+    width:515px;
+    height:280px;
+    border-radius: 5px;
+    background:
+        repeating-linear-gradient(transparent, #f2f2f0, rgb(200,200,200) 3px),
+        repeating-linear-gradient(0.25turn, transparent, #f2f2f0, rgb(200,200,200) 3px);
+    position: absolute;
+    rotate(3deg);
+    box-shadow: -2px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+#takeoutbag_text {
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+#takeoutbag_textabove {
+    position: absolute; 
+    bottom: 90px; 
+    right: 110px; 
+    font-size: 50px;
+    color: black;
+}
+
 #bluemat {
     width:400px;
     height:400px;
@@ -43,6 +85,19 @@
     left: 35%;
     transform: translate(-50%, -50%);
     text-align: left;
+}
+
+
+#notepad_flat {
+   /* add little notepad here, flat part   */ 
+}
+
+#notepad_tilted {
+    /* add little notepad page that is tilted up  */
+}
+
+#cordbox {
+    /* set plugbox for cord  */
 }
 
 #cord {
@@ -83,10 +138,10 @@
     background-color: rgb(235, 234, 200);
     border-radius: 20px;
     position: absolute;
-    bottom: 50px;
-    left: 50px;
-    transform: rotate(-20deg);
-    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+    bottom: 60px;
+    left: 60px;
+    transform: rotate(-24deg);
+    box-shadow: -10px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 #charger-object::after {
@@ -155,35 +210,80 @@
 }
 
 
+#cardwrapper {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  transform: rotate(60deg);
+}
+
 .card{
     width: 110px;
     height: 150px;
     background-color: white;
     position: absolute;
     border-radius: 15px;
-    transform: rotate(5deg);
     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
-    top: 300px;
-    left: 200px;
+    top: 270px;
+    left: 220px;
+    transform-origin: -30% 140%;
+    overflow: hidden;
 }
 
+
 #joker {
-    transform: rotate(-10deg);
+    transform: rotate(-22deg);
+    font-size: 14px;
+    padding-top: 4px;
+    box-sizing: border-box;
+    background-image: url('assemblage/joker.jpg');
+    background-size: contain;
+
 }
 
 #hiddencard1 {
-    transform: rotate(2deg);
+    transform: rotate(-4deg);
 }
 
 #card6 {
-    transform: rotate(3deg);
+    transform: rotate(-2deg);
+    padding-left: 7px;
+    font-size: 18px;
+    box-sizing: border-box;
 }
 #hiddencard2 {
-    transform: rotate(4deg);
+    transform: rotate(6deg);
 }
 
 #card2 {
-    transform: rotate(4deg);
+    transform: rotate(8deg);
+    padding-left: 7px;
+    font-size: 18px;
+    box-sizing: border-box;
+    color: rgb(185, 4, 4);
+}
+
+#card2-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: rgb(185, 4, 4);
+}
+
+#card2-bottomright {
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    font-size: 18px;
+    transform: rotate(180deg);
+    color: rgb(185, 4, 4);
+}
+
+
+#bead {
+/* add bead next to basket -- add before basket and palette so it is in the shadows*/
 }
 
 
@@ -259,6 +359,18 @@
     transform: rotate(-10deg);
 }
 
+#exclamation_bottom {
+      width: 0;
+      height: 0;
+      border-left: 80px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 250px solid rgba(82, 0, 0, .8);
+      position: absolute;
+      top: -20px;
+      right: 3px;
+      transform: rotate(-15deg);
+}
+
 #exclamation {
       width: 0;
       height: 0;
@@ -271,16 +383,20 @@
       transform: rotate(-15deg);
 }
 
+
 #basket {
     width: 100px;
     height: 85px;
     border-radius: 60px;
     position: absolute;
     background: 
+        repeating-linear-gradient(0.25turn, 
+            rgba(96, 47, 16, .5),
+            rgba(56, 28, 10, .5) 3px),
         linear-gradient(127deg, 
             black 3%,
             rgb(96, 47, 16) 97%);
-    border-color: rgb(96, 47, 16);
+    border-color: rgba(96, 47, 16, .8);
     border-width: 6px;
     border-style: solid;
     transform: rotate(-45deg);
@@ -326,6 +442,7 @@
     border-radius: 40px;
     position: absolute;
     bottom: -30px;
+    right: 10px;
     transform: rotate(90deg);
     font-size: smaller;
 }
@@ -346,7 +463,12 @@
 
     <div id="cord"></div> 
 
-    <div id="takeoutbag"></div>
+    <div id="takeoutbag">
+        <div id="takeoutbag_top">
+            <div id="takeoutbag_text"> 22266代</div>
+            <div id="takeoutbag_textabove"> 館</div>
+        </div> 
+    </div>
 
     <div id="book">
         <div id="booktitle-container"> I do<br>Keep<br>Trying</div>
@@ -373,15 +495,16 @@
 
         <div id="card-container">
             <div id="joker" class="card"> 
-                <p style='top:5px'> JoKeR</p>
             </div>
             <div id="hiddencard1" class="card"></div>
             <div id="card6" class="card"> 
-                <p style='top:0px'> 6<br>&#x2666;</p>
+                <p style='top:0px'> 6<br>&clubs;<</p>
             </div>
             <div id="hiddencard2" class="card"></div>
             <div id="card2" class="card"> 
                 <p style='top:0px'> 2<br>&#9829;</p>
+                <div id="card2-middle"> &#9829;  <br> &#9829;</div>
+                <div id="card2-bottomright"> 2<br>&#9829;</div>
             </div>
         </div>
 
@@ -393,6 +516,7 @@
 
             <div id="n_holder">n</div>
             <div id="o_holder">o</div>
+            <div id="exclamation_bottom"></div>
             <div id="exclamation"></div>
 
         </div>
