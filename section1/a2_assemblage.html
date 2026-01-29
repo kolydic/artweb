@@ -32,7 +32,7 @@
         repeating-linear-gradient(transparent, #f2f2f0, rgb(200,200,200) 3px),
         repeating-linear-gradient(0.25turn, transparent, #f2f2f0, rgb(200,200,200) 3px);
     position: absolute;
-    rotate(3deg);
+    transform: rotate(3deg);
     box-shadow: -2px 8px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -52,6 +52,31 @@
     font-size: 50px;
     color: black;
 }
+
+#hole-in-page {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 32%;
+    right: -30px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cc/Digital_rain_animation_medium_letters_shine.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+    background-color: rgba(211, 211, 211, .4);
+    background-blend-mode: overlay;
+    clip-path: polygon(
+        52% 18%, 
+        85% 12%, 
+        85% 41%, 
+        82% 63%, 
+        62% 66%, 
+        48% 83%, 
+        16% 60%, 
+        30% 46%, 
+        10% 9%);
+}
+
 
 #bluemat {
     width:400px;
@@ -88,23 +113,172 @@
 }
 
 
-#notepad_flat {
-   /* add little notepad here, flat part   */ 
+.notepad_outer {
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    background-color: rgb(255, 255, 64);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
 }
 
-#notepad_tilted {
-    /* add little notepad page that is tilted up  */
+.notepad_inner {
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    background: repeating-linear-gradient(
+        to top,
+        white 0,
+        white 8px,
+        black 8px,
+        black 9px
+    );
+    position: absolute;
+}
+
+#notepad_flat {
+    position: absolute;
+    top: 335px;
+    right: 0px;
+    transform: rotate(48deg);
+}
+
+#notepad_tilted {   
+    left: 25px;
+    top: 2px;
+    width: 95%;
+    height: 95%;
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 177);
+    box-shadow: -15px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+#cordbox_shaping {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    top: -50px;
+    left: 25px;
+    border-radius: 30px;
+    background-color: rgb(151, 151, 99);
+    transform: rotate(10deg);
+    box-shadow: -15px 15px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 #cordbox {
-    /* set plugbox for cord  */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    top: -20px; 
+    left: -5px;
+    background: radial-gradient(ellipse at 70% 10%, rgb(233, 233, 206), rgb(151, 151, 99));
 }
 
-#cord {
+#cordbox_applewrapper{
     position: absolute;
-    top: 350px;
-    /* https://stackoverflow.com/questions/26575797/css-is-it-possible-to-make-an-element-look-like-a-sine-cosine-function */
+    top: 140px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(180deg);
+    background-image: url('assemblage/apple_decay.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+#cordbox_applewrapper:hover {
+    background-image: url('assemblage/apple_decay_more.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cord-attach {
+    position: absolute;
+    top: 290px;
+    left: 30%;
+    border-bottom: 20px solid rgb(96, 96, 58); 
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    height: 0; 
+    width: 20px; 
+    transform: rotate(180deg);
+} 
+
+#cord{
+  position: absolute;
+  bottom: -120px;
+  left: 15px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-40deg);
+}
+
+/* sine wave design from:
+thanks to grey for helping me code this
+*/
+
+.ebb {
+  float: left;
+  width: 50%;
+  margin-top: -6px;
+  height: calc(50%);
+  border-top-left-radius: 80%;
+  border-bottom-left-radius: 80%;
+  border: 6px solid rgb(151, 151, 99);
+  border-right: 0px solid transparent;
+}
+
+#ebb1 {
+    transform: scale(5,.8) translateX(-12px) translateY(-6px) rotate(18deg);
+    border: 8px solid rgb(151, 151, 99);
+    border-right: 0px solid transparent;
+}
+
+#ebb2 {
+    transform: scale(2,1) rotate(4deg) translateY(-2px);
+    border: 7px solid rgb(151, 151, 99);
+    border-right: 0px solid transparent;
+}
+
+#ebb3 {
+    transform: scale(3,1) translateX(-10px);
+    border: 6px solid rgb(151, 151, 99);
+    border-right: 0px solid transparent;
+}
+
+
+.flow {
+  float: left;
+  margin-top: -6px;
+  margin-left: calc(50%);
+  width: 50%;
+  height: 50%;
+  border-top-right-radius: 80%;
+  border-bottom-right-radius: 80%;
+  border: 6px solid rgb(151, 151, 99);
+  border-left: 0px solid transparent;
+  
+}
+
+#flow1 {
+    transform: scale(1.2, 1.1) translateX(0px) translateY(-1px) rotate(4deg);
+    border: 6px solid rgb(151, 151, 99);
+    border-left: 0px solid transparent;
+}
+
+#flow3 {
+    transform: scale(4,1) translateY(-2px);
+    border: 7px solid rgb(151, 151, 99);
+    border-left: 0px solid transparent;
+}
+
 
 #plate-base {
     background-color: rgb(168, 207, 130);
@@ -283,7 +457,14 @@
 
 
 #bead {
-/* add bead next to basket -- add before basket and palette so it is in the shadows*/
+    width: 35px;
+    height: 35px;
+    background: radial-gradient(circle at 20px 10px, rgb(255,255,150), rgb(150,150,0));
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    right: 115px;
+    box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -359,6 +540,21 @@
     transform: rotate(-10deg);
 }
 
+#w_holder {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110px;
+    color: rgb(247, 113, 2);
+    text-shadow: -4px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: rotate(-10deg);
+}
+
+
 #exclamation_bottom {
       width: 0;
       height: 0;
@@ -367,7 +563,7 @@
       border-top: 250px solid rgba(82, 0, 0, .8);
       position: absolute;
       top: -20px;
-      right: 3px;
+      right: -25px;
       transform: rotate(-15deg);
 }
 
@@ -379,10 +575,18 @@
       border-top: 250px solid rgb(133, 0, 0);
       position: absolute;
       top: -20px;
-      right: 0px;
+      right: -20px;
       transform: rotate(-15deg);
 }
 
+.excl_whole {
+  transition: transform 1s ease-in;
+  transform-origin: 50% 100%;  /* set transformation origin to middle-x, bottom-y; from top left */
+}
+
+#exclamation_wrapper:hover > .excl_whole {
+  transform: rotate(20deg);
+}
 
 #basket {
     width: 100px;
@@ -447,7 +651,6 @@
     font-size: smaller;
 }
 
-
 .shifted-text {
     position: absolute;
     left: 15px;
@@ -460,19 +663,44 @@
 
 <div id="wrapper"> <!-- START CSS STILL LIFE - All HTML should be contained within this wrapper -->
     <div id="bluemat"></div>
-
-    <div id="cord"></div> 
-
     <div id="takeoutbag">
-        <div id="takeoutbag_top">
+        <div id="takeoutbag_top"> 
             <div id="takeoutbag_text"> 22266代</div>
             <div id="takeoutbag_textabove"> 館</div>
         </div> 
     </div>
 
+    <div id="hole-in-page"></div>
+
     <div id="book">
         <div id="booktitle-container"> I do<br>Keep<br>Trying</div>
     </div>
+
+    <div class="notepad_outer" id="notepad_flat">
+        iwasatree
+        <div class="notepad_inner" id="noteplad_flat_inner"></div>
+
+        <div class="notepad_outer" id="notepad_tilted">
+            iwasatree
+            <div class="notepad_inner" id="notepad_tilted_inner"></div>
+        </div>
+    </div>
+
+    <div id="cordbox_shaping">
+        <div id="cord">
+            <div class="ebb" id="ebb1"></div>
+            <div class="flow" id="flow1"></div>
+            <div class="ebb" id="ebb2"></div>
+            <div class="flow" id="flow2"></div>
+            <div class="ebb" id="ebb3"></div>
+            <div class="flow" id="flow3"></div>
+        </div> 
+        <div id="cordbox">
+            <div id="cordbox_applewrapper"></div>
+        </div>
+        <div id="cord-attach"></div>
+    </div>
+
 
     <div id="plate-base"> 
         <div id="plate-inner"></div>
@@ -480,12 +708,12 @@
         <div id="charger-object">
             <div id="charger-serial"> </div>
             <div id="charger-text">
-            I am a tiny little text bit of text on a charger, and you cannot see what I say. <br>
-            I don't say much of interest probably, but who knows, I might contain secrets..<br>
+            I am a little bit of tiny text on a charger, and you can't easily see what I say. <br>
+            I probably don't say much of interest, but who knows, I might disclose secrets.<br>
             </div>
             <div id="charger-text2">
-            For example, I might tell you that I have always loved you. I might tell you <br>
-            That I think of you every time I eat a mango and let it drip down my chin.<br>
+            For example, I might tell you that I still love you. I might tell you that I <br>
+            think of you every time I eat a mango and let juice drip down my chin.<br>
             </div>
 
             <div id="charger-plug1"></div>
@@ -508,6 +736,7 @@
             </div>
         </div>
 
+        <div id="bead"> </div>
 
         <div id="palette-board">
    
@@ -516,26 +745,26 @@
 
             <div id="n_holder">n</div>
             <div id="o_holder">o</div>
-            <div id="exclamation_bottom"></div>
-            <div id="exclamation"></div>
+            <div id="w_holder">w</div>
+            <div id="exclamation_wrapper">
+                <div class="excl_whole" id="exclamation_bottom"></div>
+                <div class="excl_whole" id="exclamation"></div>
+            </div>
 
         </div>
 
         <div id="basket"></div>
 
-    </div>      
+    </div>    
+
 
     <div id="bottlebase">
         <div id="bottle-label"></div>
         <div id="bottle-rest"></div>
         <div id="bottle-cap"><span class="shifted-text">fUn<br>jUicE</span></div>
     </div>
-            </div>
-        </div>
-    </div>
 </div>
-</div>
-                                
+                  
 
 
 </html>
