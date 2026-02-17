@@ -1,0 +1,88 @@
+<style> 
+html {
+    background-color: rgb(106, 8, 8);
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#frameholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(106, 8, 8, .3);
+    width: 300px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+#legendstyle{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    font-size: smaller;
+    color: rgb(203, 180, 180);
+    background-color: rgba(106, 8, 8, .5);
+    outline: rgba(0,0,0,.2);
+}
+
+
+</style>
+
+<html>
+<head>
+    <title>i wish you didn't</title>
+</head>
+
+<body>
+
+    <div id="frameholder">
+
+    <button id="legendstyle" onclick="location.href='they_know.html'">
+        <p id='textloop'>i'm sorry </p> 
+    </button>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+  const textElement = document.getElementById("textloop");
+  const button = document.getElementById("legendstyle");
+
+  let show = false;
+
+
+  function changingText() {
+    if (textElement.textContent == "i'm sorry") {
+        textElement.textContent = "thank you";
+        button.onclick = function () {
+            location.href = "the_story.html";};
+    } else {
+        textElement.textContent = "i'm sorry";
+        button.onclick = function () {
+            location.href = "they_know.html";};        
+    }
+  }
+  setInterval(changingText, 1000);
+
+
+  function changingBackground() {
+    if (textElement.textContent == "thank you") { 
+        show = !show;
+        document.body.style.backgroundImage = show ? "url(sorry/incantation.png)" : "none";
+    }
+  }
+  setInterval(changingBackground, 5);
+
+
+</script>

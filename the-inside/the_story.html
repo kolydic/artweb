@@ -1,0 +1,342 @@
+<style> 
+html {
+    background-color: rgb(106, 8, 8);
+    background-image: url(base/mycel.gif);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
+.flexwrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flexwrapper div {
+  display: flex;
+  flex: 1 1 25%;
+  min-width: 100px;
+  min-height: 100px; 
+  background-color: rgb(106, 8, 8);
+  border: 1px solid #000000;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+}
+
+.clickable:hover {
+    background-color: rgb(97, 7, 7);
+}
+
+#emptybox {
+    background-color: rgba(0,0,0,0);
+    border: rgba(0,0,0,0);
+}
+
+#story4:hover {
+    background-color: rgb(97, 7, 7);
+    background-image: url(sorry/incantation2.png);
+    background-position: 50%;
+    background-position-y: 35%;
+}
+
+#story2 {
+  height: 50px;
+}
+
+#story2_image {
+  height: 200px;
+}
+
+#story3_image {
+  height: 300px;
+}
+
+#story1_image {
+  height: 300px;
+} 
+
+#story4 {
+    align-self: flex-start;
+}
+
+
+.storyimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+</style>
+<html>
+
+<head>
+    <title>you stayed? ...okay.</title>
+</head>
+
+<body>
+
+
+<section>
+  <div class="flexwrapper">
+    <div class="clickable" id="story1">i am standing at the edge of a valley, opposite the mountains</div>
+    <div id="emptybox"></div>
+    <div class="clickable" id="story2">when i was a child, i played in the woods often</div>
+    <div class="clickable" id="story3">there was a fox once</div>
+    <div id="story3_image"><img class="storyimg" src="story/blank.png" name="canvas2"></img></div>
+    <div id="story2_image"><img class="storyimg" src="story/blank.png" name="canvas3"></img></div>
+    <div id="story1_image"><img class="storyimg" src="story/blank.png" name="canvas1"></img></div>
+    <div class="clickable" id="story4">you'll have to try not to think of them, always</div>
+    <div class="clickable" id="tail">...</div>
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
+<script>
+
+let story1clicks = 0;
+let story2clicks = 0;
+let story3clicks = 0;
+let story4clicks = 0;
+let tailclicks = 0;
+
+
+const images_all = [
+    'story/ankylos2_v2.png',
+    'story/ankylos2_v3.png',
+    'story/bud_branches.png',
+    'story/ankylos.gif', 
+    'story/branches.jpg',
+    'story/comfort_painting_2.png',
+    'story/creatures_out.jpg',
+    'story/fox_yard.jpg',
+    'story/HLA-B_27.png',
+    'story/lav.jpg',
+    'story/music.png',
+    'story/valley_base.jpg',
+    'story/valley_re.jpg'
+]
+
+// here we are getting a random inxdex within length bounds; return img of that index
+function getImage(){
+    var num = Math.floor(Math.random() * (images_all.length));
+    return images_all[num];
+}
+
+// flickering the image using setInterval
+// takes the canvas element and img path (which we will get from getImage() )
+function flickerImage(canvas, flickerImagePath) {
+    const blankImage = 'story/blank.png';
+    let flickerCount = 0;
+    // know the blank img file 
+    //init flickercount
+    const flickerInterval = setInterval(function() {
+      // set interval: if it's even, show image , if odd, show blank 
+        if (flickerCount % 2 === 0) {
+            // Show the flicker image
+            canvas.src = flickerImagePath;
+        } else {
+            // Show the blank image
+            canvas.src = blankImage;
+        }
+        // increment 
+        // then set to blank after 10 is reached 
+        flickerCount++;
+        if (flickerCount >= 10) {
+            clearInterval(flickerInterval);
+            // end with blank image again
+            canvas.src = blankImage;
+        }
+        // we do this in intervals of 50ms, so then the total time is .5s 
+    }, 50);
+}
+
+
+// for stories... init list of text 
+  const story1_texts = [
+    'down in the plain, i see a wolf, over to the west',
+    'he is just walking...walking across the valley',
+    'but down there, in the east end of this dip in the earth, there is...',
+    'a man? two men... they are sitting at a small table',
+    'how did that table get down there?',
+    'they are having tea, by the looks of it',
+    '...',
+    'i went down to warn them',
+    'but as i sat down, accepting their welcome, i forgot the wolf',
+    'i realized, though, i was dreaming',
+    'and so, i turned to the man and asked---',
+    'i was pleased, with this question i prepared---',
+    "'can you tell me something i've forgotten about myself?'",
+    'and just then, the sky behind him glowed, and rippled in nebulous color',
+    "it was unlike anything i've ever seen--- unlike any sky",
+    'and suddenly i realized, i forgot to listen to his answer',
+    '...',
+    'when i remembered, i looked back at him, and he was holding something--- a fox',
+    'small, dull-colored, and shaking with fear',
+    'so i took her in my arms to comfort her',
+    'and another one appeared, who also sought comfort',
+    'and so there i was, at a rickety table in the valley',
+    'comforting these two delicate, fearful foxes',
+    '---and then i was back, back at the lip of the valley',
+    'opposite the mountains',
+    'i saw a wolf, just walking... walking across the valley',
+    'except now, he is headed towards me',
+    'i stand still, so still, like a tree,',
+    'like a rock, hiding my aliveness',
+    'and i hide until the wolf will pass me',
+    'but now, he is still approaching, approaching',
+    'until he is close enough to see---',
+    'this is not what i thought', 
+    'there is no wolf--- it was a sheep, all along'
+  ];
+
+  // prep to work w/ this div 
+  const story1 = document.getElementById("story1");
+  // listen for a click w/in the element
+  story1.addEventListener("click", function() {
+    // if weve already clicked too many times in here, set to this trash string
+    if (story1clicks >= story1_texts.length) {
+        story1.textContent = '??39xxx0009xl2';
+    } else {
+      // otherwise increment to the next string in the list 
+    story1.textContent = story1_texts[story1clicks];
+    // and flicker an image
+    flickerImage(document.canvas1, getImage());
+    story1clicks++;
+    }
+  });
+
+
+  const story2_texts = [
+    'it felt so much bigger, then',
+    "i'd get lost in the snow",
+    'find a lip up to the highway and listen to the rushing',
+    'stumble, frozen and tired, out onto a street, and walk until i recognized where i was',
+    "i'd crawl, gripping roots, up the rich mud of the ledges of a drying creek",
+    "hiding with my back resting on a trunk, rock, thicket, i'd watch the deer, the turkeys",
+    '-------',
+    'i went back as an adult',
+    'you could see clear through to the highway from the road',
+    "i couldnt find any creekbeds tall enough that you couldn't just... step right out of it",
+    "there was no mystery in it, anymore"
+  ];
+
+  const story2 = document.getElementById("story2");
+  story2.addEventListener("click", function() {
+    if (story2clicks >= story2_texts.length) {
+        story2.textContent = '??x99xo20xx';
+    } else {
+    story2.textContent = story2_texts[story2clicks];
+    document.canvas2.src = getImage()
+    story2clicks++;
+    }
+  });
+
+
+
+  const story3_texts = [
+    'she made her way from the wood to the houses',
+    'everyone talked about the fox---',
+    'all us kids, at least---',
+    'asking around, who the last night heard her screaming?',
+    'once, we saw her at dusk--- a couple of us walking home',
+    'only a few yards away from us',
+    'we saw her, and she saw us',
+    'and we clambored up quickly onto a mailbox',
+    'and i dont even remember what happened, then',
+    '...',
+    'in those days, rabies was a fear we all faced',
+    '(in those days, we didnt know to ask who was poisoning the water)',
+    '(in those days, we didnt have other violence to occupy our minds)',
+    '(in those days, the woods were a world to discover, get lost in',
+    '(and no one was trying to die)',
+    '...',
+    'when i dreamed of her, years later, i know she spoke to me...',
+    'but i forgot what she said'
+  ];
+  const story3 = document.getElementById("story3");
+  story3.addEventListener("click", function() {
+    if (story3clicks >= story3_texts.length) {
+        story3.textContent = 'x?0xs02lx';
+    } else {
+    story3.textContent = story3_texts[story3clicks];
+    flickerImage(document.canvas3, getImage());
+    story3clicks++;
+    }
+  });
+
+
+  const story4_texts = [
+    '...',
+    'they watched me from the graveyard <br> through the window at night',
+    'and i cloaked myself in violet',
+    "you can't not think of what you're meant to think of <br> and if i tell you",
+    'they will know <br> they will know your timeline, red glow to violet hum',
+    'they know the creases, shadows, cracks...this is their nature',
+    '...',
+    'in the dark, they are approaching, always closing half the distance',
+    'you cannot keep a dark room at night',
+    'if they get close enough, i dont even know what happens',
+    'my hard-coded survival drive has kept me from amusing that curiosity',
+    'but it would NOT be good...my deepest animal brain knows..',
+    'it would be very bad for you, your wholest self, if they get close enough',
+    '--------',
+    'i sang to them, and they listened <br> a dutiful, respectful audience',
+    'they held formation along the yard, where the grass blades met the forest',
+    'but i cloaked myself. they knew. they knew not to approach---',
+    'if you cloak yourself right, <br> they will honor the barrier',
+    '--------',
+    'they stood with such longing-- hunger?--',
+    'they have eyes you cannot see, but in them is deep longing because',
+    'THEY. they want to be seen',
+    'they want in they want in they want in they want in they want in they want in they want in they want in they want in they want in they want in they want in',
+    'they want only to be seen, they are like children <br> and want comfort, they want witnessing',
+    'all hauntings crave just witnessing',
+    '--------',
+    'i named them once, twice, aloud',
+    'and now their name settles in me like peace-of-mind',
+    'but a self-attack of body still muddles it',
+    "they left their fingerprints on my whole's instructions",
+    'but they left, once i tended to them, the little children watching from the edge of the woods--- once named',
+    "i don't know where they are now, if they are",
+  ];
+  const story4 = document.getElementById("story4");
+  story4.addEventListener("click", function() {
+    if (story4clicks >= story4_texts.length) {
+        story4.textContent = 'xx99xx90xl22x';
+    } else {
+    story4.textContent = story4_texts[story4clicks];
+    story4clicks++;
+    }
+  });
+
+
+  const tail_texts = [
+    'did you really want to know?',
+    '...',
+    'i dream of her, sometimes',
+    "a fox at the graveyard's edge",
+    'and i wonder what she told me',
+    '///',
+    'did you really want to know?',
+    'did you get anything out of it, in the end?',
+  ];
+  const tail = document.getElementById("tail");
+  tail.addEventListener("click", function() {
+    if (tailclicks >= tail_texts.length) {
+        tail.textContent = 'did i?';
+    } else {
+    tail.textContent = tail_texts[tailclicks];
+    tailclicks++;
+    }
+  });
+
+
+
+</script>

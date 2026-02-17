@@ -1,9 +1,71 @@
+<style> 
+html {
+    background-image: url(base/mycel.gif);
+    background-color: rgb(106, 8, 8);
+}
+
+
+#frameholder {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: rgb(106, 8, 8);
+}
+
+fieldset {
+    border: 3px solid black;
+}
+
+
+legend{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    font-size: smaller;
+}
+
+#legendstyle{
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10%;
+    font-weight: 1000;
+    font-size: smaller;
+    color: rgb(203, 180, 180);
+    background-color: rgb(106, 8, 8);
+    text-align: center;
+}
+
+
+#legendstyle:hover {
+    background-color: rgb(131, 87, 87);
+}
+
+
+</style>
+
+<html>
 <head>
-    <title>you should leave now</title>
-    <link rel="stylesheet" href="style.css">
+    <title>i think you should leave now</title>
 </head>
 
 <body>
-    <img src="mycel.gif">
-<!-- from https://www.anbg.gov.au/fungi/mycelium.html -->
+
+    <div id="frameholder">
+
+    <fieldset>
+        <legend>do</legend>
+        <fieldset>
+            <legend>. you</legend>
+            <fieldset> <legend>. . really</legend> 
+                <fieldset> <legend>. . . want </legend> 
+                    <fieldset> <legend>. . . . to </legend> 
+                        <button id="legendstyle" onclick="location.href='know.html'">know</button>
+                    </fieldset>
+                </fieldset>
+            </fieldset>
+        </fieldset>
+    </fieldset>
+
+    </div>
+
 </body>
+
+</html>

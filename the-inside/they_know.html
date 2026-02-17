@@ -1,0 +1,53 @@
+<style> 
+html {
+    background-image: url(base/mycel.gif);
+    background-color: rgb(106, 8, 8);
+}
+
+
+#frameholder {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: rgb(106, 8, 8);
+    width: 300px;
+    height: 300px;
+}
+
+#legendstyle{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    font-size: smaller;
+    color: rgb(203, 180, 180);
+    background-color: rgb(106, 8, 8);
+}
+
+
+</style>
+
+<html>
+<head>
+    <title>don't click... just leave</title>
+</head>
+
+<body>
+
+    <div id="frameholder">
+
+    <button id="legendstyle" onclick="location.href='they_know.html'">
+        they know when you are thinking of them <br><br>
+        they can see that, you know. 
+    </button>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+  setTimeout(() => window.location.href = "sorry.html", 3000);
+</script>
