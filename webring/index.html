@@ -1,0 +1,101 @@
+<style> 
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
+#choose-box {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.clickable {
+    background-color: rgb(118, 185, 135);
+    height: 100px;
+    width: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20%;
+}
+
+
+.clickable:hover {
+    background-color: rgb(93, 145, 106);
+}
+
+
+</style>
+<html>
+
+<head>
+    <title>THE BEST EVER WEBRING</title>
+</head>
+
+<body>
+
+    <div id="choose-box">
+
+    <h1>take me to...</h1>
+
+    <button id="spacesButton" class="clickable">(a) space</button>
+    <button id="gameButton" class="clickable">a game</button>
+    <button id="storiesButton" class="clickable">a story</button>
+
+    </div>
+
+
+</body>
+</html>
+
+
+
+<script>  
+
+// take me to a story 
+// take me to a game 
+// take me to (a) space 
+
+const story_links=[
+    'https://rynbonds.github.io/secret-site/',
+    'https://kolydic.github.io/artweb/the-inside/',
+]
+
+const space_links=[
+    'https://ricardodalvarado01.github.io/',
+    'https://dumrong1.github.io/s1fp/index.html'
+]
+
+const game_links=[
+    'https://mlu234.github.io/S1FP/index.html',
+    'https://songzhangjk2018.github.io/s1fp01/test.html'
+]
+
+// here we are getting a random inxdex within length bounds; return img of that index
+function getItem(whichList){
+    var num = Math.floor(Math.random() * (whichList.length));
+    return whichList[num];
+}
+
+
+// prep to work w/ each div 
+const games = document.getElementById("gameButton");
+const stories = document.getElementById("storiesButton");
+const spaces = document.getElementById("spacesButton");
+
+// listener per category --> choose randomly with getItem()
+
+games.addEventListener("click", function() {
+    window.location.href = getItem(game_links);
+});
+
+stories.addEventListener("click", function() {
+    window.location.href = getItem(story_links);
+});
+
+spaces.addEventListener("click", function() {
+    window.location.href = getItem(space_links);
+});
+
+
+
+</script>
