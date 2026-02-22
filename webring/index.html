@@ -86,15 +86,15 @@ const spaces = document.getElementById("spacesButton");
 // listener per category --> choose randomly with getItem()
 
 games.addEventListener("click", function() {
-    window.location.href = getItem(game_links);
+    window.open(getItem(game_links), "_blank");
 });
 
 stories.addEventListener("click", function() {
-    window.location.href = getItem(story_links);
+    window.open(getItem(story_links), "_blank");
 });
 
 spaces.addEventListener("click", function() {
-    window.location.href = getItem(space_links);
+    window.open(getItem(space_links), "_blank");
 });
 
 
