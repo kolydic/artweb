@@ -159,6 +159,7 @@ input[type="range"] {
 }
 
 #convince-container {
+    position: absolute; /* static?? check on mobile now! */
     width: 100%;
     background-color: #915151;
     position: fixed;
@@ -514,18 +515,20 @@ magr_range.addEventListener('input', function() {
 });
 
 
-const pipe_is_spoon =
-    document.getElementById("radio7_5").checked || //or 
-    document.getElementById("radio7_6").checked || //or 
-    document.getElementById("radio7_7").checked;
+document.getElementById("radio7").addEventListener("change", function() {
 
-if (pipe_is_spoon) {
-    document.getElementById("alt7").innerText = "Imbécile! Ceci n'est pas une cuillère. Ceci n'est même pas une pipe.";
-    } else {
-    document.getElementById("alt7").innerText = "Magritte's famous painting of a pipe.";
-    }
+    const pipe_is_spoon =
+        document.getElementById("radio7_5").checked || //or 
+        document.getElementById("radio7_6").checked || //or 
+        document.getElementById("radio7_7").checked;
 
+    if (pipe_is_spoon) {
+        document.getElementById("alt7").innerText = "Imbécile! Ceci n'est pas une cuillère. Ceci n'est même pas une pipe.";
+        } else {
+        document.getElementById("alt7").innerText = "Magritte's famous painting of a pipe.";
+        }
 
+});
 
 submit_response = document.getElementById("submit_response");
 
