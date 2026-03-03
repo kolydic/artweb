@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Gaegu' rel='stylesheet'>
+
+
+<style>
+
+html {
+    font-family: 'Gaegu';
+    background-color: rgb(250, 205, 205);
+}
+
+/* Styling for range input across browsers */
+/* taken from tutorial: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/*/
+
+input[type=range] {
+  appearance: none;
+  margin: 0 0;
+  width: 80%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 80%;
+  height: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #ce7c7c;
+  border-radius: 1.3px;
+  border: 0.2px solid #915151;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 36px;
+  width: 16px;
+  border-radius: 25%;
+  background: #915151;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ce7c7c;
+}
+input[type=range]::-moz-range-track {
+  width: 80%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #ce7c7c;
+  border-radius: 1.3px;
+  border: 0.2px solid #915151;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 36px;
+  width: 16px;
+  border-radius: 25%;
+  background: #915151;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 80%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #ce7c7c;
+  border: 0.2px solid #915151;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #ce7c7c;
+  border: 0.2px solid #915151;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 36px;
+  width: 16px;
+  border-radius: 25%;
+  background: #915151;
+  cursor: pointer;
+}
+
+#spoonrate_instr {
+    font-size: 3vh;
+}
+
+
+.spoondiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.altdiv {
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    max-width: 250px;
+}
+
+.spoondiv:hover + .altdiv {
+    display: flex;
+}
+
+#imgcontainer {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  gap: 20px 10px;
+}
+
+img {
+  width: 10vw;
+  height: 10vw; 
+  object-fit: contain;
+  height: auto; 
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  img {
+    width: 80vw;
+    height: 80vw;
+  }
+  .altdiv {
+    font-size: 5vw;
+  }
+
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.range_label {
+    font-size: 0.8em;
+    color: #513434;
+}
+
+input[type="range"] {
+  flex-grow: 1; /* Allows the slider to take up available space */
+}
+
+
+#nexttask_label {
+    font-size: 22px;
+}
+
+#nexttask-container {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-position: center;
+
+}
+
+#convince-container {
+    width: 100%;
+    background-color: #915151;
+    position: fixed;
+    display: none;
+    
+}
+
+#nexttask:checked ~ #convince-container {
+    display: block;
+}
+
+</style>
+
+
+
+
+
+<html>
+<body>
+
+<!-- add additional metadata for images? -->
+<!-- make everything here into an iframe. there will be a separate iframe for nonvisual, text only; and interactive/visual-->
+
+
+<h2>welcome to... <h1>S P O O N H O O D</h1>(SPOONHOOD!) (?)</h2><br>
+<h3>explore the questions that plague us all: <br> what makes a spoon a spoon? what makes a not-spoon a not-spoon? <br>
+    what <i>REALLY</i> gives spoons their SPOONHOOD?</h3>
+<div id="spoonrate_instr"> 
+    Rate each possible spoon on a scale of "not at all spoon" to "yes, very spoon". 
+    Please be aware that these are <i>clay artefacts</i>. They are not crafted by a cow, as some may have insinuated.
+    They are also not... excrement, as may have been so rudely suggested (i.e., declared) by others. They are HAND-CRAFTED terracotta CLAY. ARTEFACTS. 
+    Thank you for your cooperation. <br><br>
+</div>
+<div id="imgcontainer">
+
+    <div id="spoon1" class="spoondiv">
+        <img src="is_spoon/1.png" 
+        alt="a red clay artefact with a curling handle, much like the curled tail of a cartoon pig. The head of this artefact flattens out to a wide edge, sort of like a wooden spatula.">
+        <!-- if mobile, don't show range-container.. create mobile alternative, show instead (w/ media rules)  -->
+        <div class="range-container">
+            <label for="rate1" class="range-label start-label">not at all spoon</label>
+            <input id="rate1" type="range" min="0" max="100" value="50">
+            <label for="rate1" class="range-label end-label">yes,very spoon</label>
+        </div>
+    </div>
+    <div class="altdiv" id="alt1">a clay artefact with a curling handle, much like the curled tail of a cartoon pig. The head of this artefact flattens out to a wide edge, sort of like a wooden spatula.</div>
+
+
+    <div id="spoon2" class="spoondiv">
+        <img src="is_spoon/2.png" 
+        alt="a long red clay artefact with a handle that curls up and over itself, like the tail of a scorpion. Its head is slightly wider, rounded, and mostly carved out.">
+        <div class="range-container">
+            <label for="rate2" class="range-label start-label">not at all spoon</label>
+            <input id="rate2" type="range" min="0" max="100" value="50">
+            <label for="rate2" class="range-label end-label">yes,very spoon</label>
+        </div>
+    </div>  
+    <div class="altdiv" id="alt2">a long red clay artefact with a handle that curls up and over itself, like the tail of a scorpion. Its head is slightly wider, rounded, and mostly carved out.</div> 
+
+    <div id="spoon3" class="spoondiv">
+        <img src="is_spoon/3.png" 
+        alt="a red clay artefact that looks like a rectangular block with rounded edges, slightly wider than it is tall. A small hole has been carved out on the longer top surface, centered close to the edge.">
+        <div class="range-container">
+            <label for="rate3" class="range-label start-label">not at all spoon</label>
+            <input id="rate3" type="range" min="0" max="100" value="50">
+            <label for="rate3" class="range-label end-label">yes,very spoon</label>
+        </div>
+    </div>
+    <div class="altdiv" id="alt3">a red clay artefact that looks like a rectangular block with rounded edges, slightly wider than it is tall. A small hole has been carved out on the longer top surface, centered close to the edge.</div> 
+
+    <div id="spoon4" class="spoondiv">
+        <img src="is_spoon/4.png" 
+        alt="a long red clay artefact, widest at its middle, but it has a small widened end, which has a tiny divot (more, perhaps, like a light dent) on its surface. it is rumored to look like a fat blunt, but I personally disagree.">
+        <div class="range-container">
+            <label for="rate4" class="range-label start-label">not at all spoon</label>
+            <input id="rate4" type="range" min="0" max="100" value="50">
+            <label for="rate4" class="range-label end-label">yes,very spoon</label>
+        </div>
+    </div>
+    <div class="altdiv" id="alt4">a long red clay artefact, widest at its middle, but it has a small widened end, which has a tiny divot (more, perhaps, like a light dent) on its surface. it is rumored to look like a fat blunt, but I personally disagree.</div>
+
+    <div id="spoon5" class="spoondiv">
+        <img src="is_spoon/5.png" 
+        alt="a red clay artefact with a squiggly handle, like a sidewinding snake, and a long hollow head, like a pitcher plant.">
+        <div class="range-container">
+            <label for="rate5" class="range-label start-label">not at all spoon</label>
+            <input id="rate5" type="range" min="0" max="100" value="50">
+            <label for="rate5" class="range-label end-label">yes,very spoon</label>
+        </div>
+    </div>
+    <div class="altdiv" id="alt5">a red clay artefact with a squiggly handle, like a sidewinding snake, and a long hollow head, like a pitcher plant.</div>
+
+    <div id="spoon6" class="spoondiv">
+        <img src="is_spoon/6.png" 
+        alt="a red clay artefact with a long, straight handle. The head of this artefact is like a donut, pinched at one end where it meets the handle.">
+        <div class="range-container">
+            <label for="rate6" class="range-label start-label">not at all spoon</label>
+            <input id="rate6" type="range" min="0" max="100" value="50">
+            <label for="rate6" class="range-label end-label">yes,very spoon</label>
+        </div>
+    </div>
+    <div class="altdiv" id="alt6">a red clay artefact with a long, straight handle. The head of this artefact is like a donut, pinched at one end where it meets the handle.</div>
+
+    <div id="spoon7" class="spoondiv">
+        <img src="is_spoon/7.png" 
+        alt="Image 7">
+        <div class="range-container">
+            <label for="rate7" class="range-label start-label">not at all spoon</label>
+            <input id="rate7" type="range" min="0" max="100" value="50">
+            <label for="rate7" class="range-label end-label">yes,very spoon</label>
+        </div>
+        <!-- if value > 50, a text pops up beside the div that says in french: "you fool! this is not a spoon. this is not even a pipe." the title of the div holding it will translate it to english-->
+        <!-- Imbécile! Ce n'est pas une cuillère. Ce n'est même pas une pipe. -->
+    </div>
+    <div class="altdiv" id="alt7">Magritte's famous painting of a pipe, which is not a pipe! But is it a spoon?</div>
+
+</div>
+
+<br><br><br>
+
+<div id="nexttask-container">
+    <input id="nexttask" type="checkbox">
+    <label for="nexttask" id="nexttask_label">i have dictated the spoonhood of possible spoons to my liking. give me more to do</label>
+
+
+    <div id="convince-container">
+        NOW. the new task. 
+        <div id="stationary-task"> since you are stationary, at present... </div>
+        <div id="mobile-task"> since you are on a mobile device, at present... </div>
+        <br><br>
+        <br><br>
+        <br><br>
+    </div>
+
+</div>
+
+
+</body>
+</html>

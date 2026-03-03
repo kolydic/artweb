@@ -1,0 +1,15 @@
+natural time is non.numeric. natural time is told in weather, in sun
+
+animal time is understood as the duration of routine activities 
+a good animal would know their time in actions: 
+
+sleep
+shower
+coffee
+labor
+nap
+eat
+labor
+movement
+reading
+sleep
