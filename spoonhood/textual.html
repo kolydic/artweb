@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Gaegu' rel='stylesheet'>
+
+
+<style>
+
+html {
+    font-family: 'Gaegu';
+    background-color: rgb(250, 205, 205);
+}
+
+#spoonrate_instr {
+    font-size: 3vh;
+}
+
+#artefact-container {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  gap: 30px 30px;
+}
+
+.spoondiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.altdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 250px;
+}
+
+#nexttask_label {
+    font-size: 22px;
+}
+
+#nexttask-container {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-position: center;
+
+}
+
+#convince-container {
+    position: static; /* ?? figure out why not visible on mobile! */
+    display: block;
+    width: 100%;
+    background-color: #915151;
+    position: fixed;
+    font-size: 5vw;
+    
+}
+
+#stationary-task {
+    display: block;
+  }
+
+#mobile-task {
+    display: none;
+  }
+
+
+#pointer {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .altdiv {
+    font-size: 5vw;
+  }
+
+  #stationary-task {
+    display: none;
+  }
+  #mobile-task {
+    display: block;
+  }
+
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+    #stationary-task {
+        display: none;
+    }
+    #mobile-task {
+        display: block;
+    }
+
+}
+
+button {
+    font-family: 'Gaegu';
+    font-size: 4vw;
+    padding: 10px;
+    border: 2px solid #915151;
+    border-radius: 5px;
+    resize: none;
+}
+
+
+</style>
+
+
+
+
+
+<html>
+<body>
+
+<!-- add additional metadata for images? -->
+
+
+<!-- make everything here into an iframe. there will be a separate iframe for nonvisual, text only; and interactive/visual-->
+
+    <div id="spoonrate_instr"> 
+        Consider each possible spoon on a scale of 1 to 7, where 1 is "not at all spoon" and 7 is "yes, very spoon". 
+        Each possible spoon is a description of a real <i>clay artefact</i> that was handcrafted by ME. 
+        A fantastic and delightful artist who can craft clay artefacts that do not look at all like they were made by a cow.  
+        <br><br>
+    </div>
+
+<br><br>
+
+<div id="artefact-container">
+
+    <div id="spoon1" class="spoondiv">
+        <div class="altdiv" id="alt1"> <b>Artefact A.</b> A clay artefact with a curling handle, much like the curled tail of a cartoon pig. The head of this artefact flattens out to a wide edge, sort of like a wooden spatula.
+            <div>
+                on a scale of 1 to 7, how spoon is this artefact? answer mentally, i will know your answer. <br>
+                Reminder: 1 means "not at all spoon" and 7 means "yes, very spoon." 
+            </div>
+        </div>
+    </div>
+
+    <div id="spoon2" class="spoondiv">
+        <div class="altdiv" id="alt2"> <b>Artefact B.</b> A long red clay artefact with a handle that curls up and over itself, like the tail of a scorpion. Its head is slightly wider, rounded, and mostly carved out.
+            <br>
+            <div>
+                on a scale of 1 to 7, how spoon is this artefact? answer mentally, i will know your answer. <br>
+                Reminder: 1 means "not at all spoon" and 7 means "yes, very spoon." 
+            </div>
+        </div> 
+    </div>
+
+
+    <div id="spoon3" class="spoondiv">
+        <div class="altdiv" id="alt3"> <b>Artefact C.</b> A red clay artefact that looks like a rectangular block with rounded edges, slightly wider than it is tall. A small hole has been carved out on the longer top surface, centered close to the edge.
+            <div>
+                on a scale of 1 to 7, how spoon is this artefact? answer mentally, i will know your answer. <br>
+                Reminder: 1 means "not at all spoon" and 7 means "yes, very spoon." 
+            </div>
+        </div> 
+    </div>
+
+    <div id="spoon4" class="spoondiv">
+        <div class="altdiv" id="alt4"> <b>Artefact D.</b> A long red clay artefact, widest at its middle, but it has a small widened end, which has a tiny divot (more, perhaps, like a light dent) on its surface. it is rumored to look like a fat blunt, but I personally disagree.
+            <div>
+                on a scale of 1 to 7, how spoon is this artefact? answer mentally, i will know your answer. <br>
+                Reminder: 1 means "not at all spoon" and 7 means "yes, very spoon." 
+            </div>
+        </div>
+    </div>
+
+    <div id="spoon5" class="spoondiv">
+        <div class="altdiv" id="alt5"> <b>Artefact E.</b> A red clay artefact with a squiggly handle, like a sidewinding snake, and a long hollow head, like a pitcher plant.
+            <div>
+                on a scale of 1 to 7, how spoon is this artefact? answer mentally, i will know your answer. <br>
+                Reminder: 1 means "not at all spoon" and 7 means "yes, very spoon." 
+            </div>
+        </div>
+    </div>
+
+
+    <div id="spoon6" class="spoondiv">
+        <div class="altdiv" id="alt6"> <b>Artefact F.</b> A red clay artefact with a long, straight handle. The head of this artefact is like a donut with a big hollow middle, pinched at one end where it meets the handle.
+            <div>
+                on a scale of 1 to 7, how spoon is this artefact? answer mentally, i will know your answer. <br>
+                Reminder: 1 means "not at all spoon" and 7 means "yes, very spoon." 
+            </div>
+        </div>
+    </div>
+
+
+    <div id="spoon7" class="spoondiv">
+        <div class="altdiv" id="alt7"> <b>Artefact G.</b> Magritte's famous painting of a pipe.
+            <div>
+                on a scale of 1 to 7, how spoon is this artefact? answer mentally, i will know your answer. <br>
+                Reminder: 1 means "not at all spoon" and 7 means "yes, very spoon." 
+            </div>
+            <div id="complaint">Wait, did someone just rate this a seven??? <br>
+            Imbécile! Ceci n'est pas une cuillère. Ceci n'est même pas une pipe! </div>
+        </div>
+    </div>
+
+
+</div>
+
+<br><br><br>
+
+<div id="nexttask-container">
+    now that you have dictated the spoonhood of possible spoons, here is more to do...
+
+    <div id="convince-container">
+        NOW. the new task. 
+        <div id="stationary-task"> 
+            since you are stationary, at present... please grab ANYTHING within reach. <br><br>
+            now, describe in your mind: What is the object, and how could you use it... <br><br>
+            as a spoon? <br>
+            click the submit button below when you are done. 
+            <br><br>
+        </div>
+
+        <div id="mobile-task"> since you are moveable, at present... please go find the nearest (actual) spoon. <br><br>
+            now (perhaps with live action exploration as your guide), describe in your mind: how could you use this object... <br><br>
+            as something OTHER THAN a spoon?  <br>
+            click the submit button below when you are done. 
+            <br><br>
+        </div>
+
+
+        <div id="pointer"> survey says....   vvv </div>
+
+        <button id="submit_response" type="button">submit</button>
+
+    </div>
+
+</div>
+
+
+
+</body>
+
+
+
+<script>
+
+
+submit_response = document.getElementById("submit_response");
+
+submit_response.addEventListener('click', function() {    
+    submit_response.style.display = "none";
+    document.getElementById("pointer").style.display = "block";
+    document.getElementById("convince-container").innerHTML += "<br>..... spoonhood afforded <br><br> thanks 4 playing spoonhood <br> smooches and hearts and spoon emojis xoxo goodbye<br><br><br>"; 
+    }
+);
+
+
+</script>
+</html>
+
