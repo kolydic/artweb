@@ -1,0 +1,18 @@
+html {
+  background-color: rgba(144, 58, 70, .3);
+}
+
+html, body {
+  margin: 30px;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+iframe {
+  display: block;
+  border: none;
+  width: 450px;
+  height: 450px;
+}
