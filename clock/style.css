@@ -6,15 +6,9 @@ html, body {
   margin: 30px;
   padding: 0;
 }
+
 canvas {
   display: block;
   transform-origin: top left;
   transform: scale(calc((100vw - 120px) / 400px));
-}
-
-iframe {
-  display: block;
-  border: none;
-  width: 450px;
-  height: 450px;
 }
