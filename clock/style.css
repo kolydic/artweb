@@ -10,5 +10,5 @@ html, body {
 canvas {
   display: block;
   transform-origin: top left;
-  transform: scale(calc((100vw - 120px) / 400px));
+  transform: scale(calc((100vh - 120px) / 400px));
 }
