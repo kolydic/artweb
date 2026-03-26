@@ -22,3 +22,10 @@ img {
   width: 200px;
   height: 200px;
 }
+
+.text_container {
+    display: block;
+    align-items: center;
+    max-width: 400px;
+    font-size: 18px;
+    }
