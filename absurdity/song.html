@@ -3,5 +3,19 @@
 </head>
 
 <div class="text_container">
-    as;dfaksldfajsdf
+    
+Take the paper and pen from Kirsten's desk. <br><br>
+As quickly as you can, rip the paper into <span id="paper_n"></span> scraps. <br>
+Write the word "arugula" on each scrap. <br><br>
+Lay the scraps out in front of you. <br><br>
+Try to complete these instructions before the first minute is up. <br>
+Then, sit looking at your scraps of paper. <br><br>
+As needed, defend your innocence. This will make sense if the time comes. 
+
 </div>
+
+<script>
+// get between 5 and 20 scraps of paper
+document.getElementById("paper_n").innerHTML = Math.floor(Math.random() * (20 - 5) + 5);
+</script>
+

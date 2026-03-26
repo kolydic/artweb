@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<div id="countdown">
+    4:00
+</div>
+
+<script>
+
+// set the countdown to 4 minutes
+var countdown = 4 * 60; // 4 minutes in seconds
+var countdownElement = document.getElementById("countdown");
+var timer = setInterval(function() {
+    
+    var minutes = Math.floor(countdown / 60);
+    var seconds = countdown % 60;
+
+    // format the time as MM:SS
+    countdownElement.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+    // decrement the countdown
+    countdown--;
+
+    // when the countdown reaches zero, stop the timer and alert the user
+    if (countdown == 0) {
+        clearInterval(timer);
+        countdownElement.innerHTML = "Thank for participating in <i>Absurdity</i>!";
+    }
+}, 1000);
+
+</script>

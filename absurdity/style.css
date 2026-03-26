@@ -29,3 +29,32 @@ img {
     max-width: 400px;
     font-size: 18px;
     }
+
+#start_timer {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #333;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#start_timer:hover {
+    background-color: rgb(255, 209, 209);
+}
+
+
+#countdown {
+    display: block;
+    margin: 30%;
+    font-size: 64px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+
