@@ -1,0 +1,180 @@
+
+/* ---------------- FONT ---------------- */
+@font-face {
+    font-family: 'ArchitectsDaughter';
+    /* src: url('ArchitectsDaughter-Regular.ttf') format('truetype'); */
+    src: url('gopron.italic.otf') format('truetype');
+}
+
+/* ---------------- GLOBAL CONTROL ---------------- */
+:root {
+    --mickey-offset: 15vh; 
+}
+
+/* ---------------- RESET ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- BASE ---------------- */
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: 'ArchitectsDaughter', cursive;
+    overflow-x: hidden;
+
+    /* SEAMLESS WHITE → BLUE GRADIENT */
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0vh,
+        #ffffff 120vh,
+        #fdfefe 150vh,
+        #f7faff 180vh,
+        #eef3fb 220vh,
+        #e0e9f7 260vh,
+        #cddaf0 300vh,
+        #bac8e0 350vh
+    );
+
+    background-repeat: no-repeat;
+}
+
+/* ---------------- SECTION ---------------- */
+.section {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    background: transparent;
+}
+
+/* ---------------- TEXT ---------------- */
+.text {
+    font-size: 2.5vw;
+    text-align: center;
+    max-width: 70vw;
+    line-height: 1.4;
+    color: #000;
+}
+
+.small-text {
+    font-size: 2vw;
+    margin: 1vh 0;
+    text-align: center;
+    max-width: 70vw;
+    color: #1a2a44;
+}
+
+/* ---------------- MICKEY (ADJUSTABLE DISTANCE) ---------------- */
+.mickey {
+    position: absolute;
+    bottom: var(--mickey-offset); 
+    width: 150px;
+    animation: runAcross 8s linear infinite;
+}
+
+@keyframes runAcross {
+    0% { transform: translateX(30vw); }
+    100% { transform: translateX(-120vw); }
+}
+
+
+#solution_hint {
+    animation: fadeIn 3s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1;}
+}
+
+/* ---------------- GIF ---------------- */
+.gif {
+    width: 200px;
+    margin-top: 3vh;
+}
+
+.arrowdown {
+  position: relative;
+  left: 40%;
+  width: 0px;
+  height: 0px;
+  border-bottom: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+  border-left: 5vw solid transparent;
+  border-top: 5vw solid #fc2a65;
+}
+
+
+/* ---------------- LINE ANIMATION ---------------- */
+.line {
+    opacity: 0;
+    transform: translateY(30px);
+    font-size: 1.6vw;
+    margin: 1vh;
+    padding: 2vh;
+    transition: all 0.6s ease;
+    text-align: center;
+    max-width: 80vw;
+    color: #1a2a44;
+    font-family: 'ArchitectsDaughter';
+    background-color: #7a9bd3;
+    border-radius: 20px;
+}
+
+.line.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.text_reveal {
+    font-size: 2.5vw;
+    text-align: center;
+    max-width: 70vw;
+    line-height: 1.4;
+    color: #000;
+    display: none;
+}
+
+.popup-description{
+  display: none;
+  font-weight: bold;
+  margin: 1vh;
+  background-color: #fc2a65;
+  padding: 2vh;
+  border-radius: 20px;
+}
+
+[type="radio"]:checked ~ label ~ .popup-description{
+  display: block;
+}
+/* source for radio behavior: https://stackoverflow.com/questions/61461393/how-can-i-show-messages-depending-on-selected-radio-buttons */
+
+
+
+/* ---------------- IMAGE ---------------- */
+.blackmail {
+    width: 250px;
+    margin-top: 3vh;
+}
+
+/* ---------------- SUBTLE DEPTH ---------------- */
+.section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
+    pointer-events: none;
+}
