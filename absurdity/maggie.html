@@ -3,5 +3,19 @@
 </head>
 
 <div class="text_container">
-    as;dfaksldfajsdf
+<label for="Maggie">Maggie</label> <br>
+1. Begin in front of <span id="maggie-location"></span> <br>
+2. Perform <span id="maggie-count"></span> <span id="maggie-exercise"></span>, as slowly or quickly as you wish <br>
+3. Walk <span id="maggie-direction"></span> <span id="maggie-steps"></span> steps, and repeat until the time is up.
+
+<script>
+function pick(options) {
+  return options[Math.floor(Math.random() * options.length)];
+}
+document.getElementById("maggie-location").innerText = pick(["a TV", "a corkboard", "a door", "Grey", "Song"]);
+document.getElementById("maggie-count").innerText = pick(["1", "3"]);
+document.getElementById("maggie-exercise").innerText = pick(["lunges", "jumping jacks", "squats"]);
+document.getElementById("maggie-direction").innerText = pick(["to the right", "to the left", "forward", "backward"]);
+document.getElementById("maggie-steps").innerText = pick(["1", "2"]);
+</script>
 </div>
