@@ -4,5 +4,16 @@
 
 
 <div class="text_container">
-    as;dfaksldfajsdf
+    <label>Grace</label><br>
+1. Choose a person in the room. Point both your hands at them.<br>
+2. When the timer starts, walk to that person.<br>
+3. Always keep your hand on their <span id="grace-bodypart"></span> and if they move follow them.<br>
+4. Repeat whatever that person do silently.
+
+<script>
+  function pick(options) {
+    return options[Math.floor(Math.random() * options.length)];
+  }
+  document.getElementById("grace-bodypart").innerText = pick(["shoulder", "elbow"]);
+</script>
 </div>
