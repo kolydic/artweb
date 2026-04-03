@@ -1,7 +1,6 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <div class="text_container">
     <label>Kirsten</label><br>
 1. When the timer starts, stand in the corner with your arms crossed for <span id="kirsten-seconds"></span> seconds.<br>
@@ -10,8 +9,11 @@
 4. Say "<span id="kirsten-phrase2"></span>".<br>
 5. Repeat steps 3 and 4 until you talk to <span id="kirsten-people"></span> people.<br>
 6. Go to Lauryn and always keep your hand on any of her <span id="kirsten-bodypart"></span>. Follow her around.<br>
-
 <script>
+  function pick(options) {
+    return options[Math.floor(Math.random() * options.length)];
+  }
+
   document.getElementById("kirsten-seconds").innerText = pick(["15", "30"]);
   document.getElementById("kirsten-phrase1").innerText = pick(["What is happening", "Everyone is acting weird", "I'm the only normal one here"]);
   document.getElementById("kirsten-phrase2").innerText = pick(["What is happening", "Everyone is acting weird", "I'm the only normal one here"]);
