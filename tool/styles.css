@@ -163,18 +163,34 @@ body {
 /* source for radio behavior: https://stackoverflow.com/questions/61461393/how-can-i-show-messages-depending-on-selected-radio-buttons */
 
 
+/* ---------------- testimonials ---------------- */
 
-/* ---------------- IMAGE ---------------- */
-.blackmail {
-    width: 250px;
+#testimonials_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}   
+
+.testimonial {
+    background-color: #7a9bd3;
+    padding: 2vh;
+    border-radius: 20px;
+    max-width: 80vw;
+    text-align: center;
+    color: #1a2a44;
+    font-family: 'ArchitectsDaughter';
+    font-size: 1.6vw;
+}   
+
+
+
+#app-link {
     margin-top: 3vh;
-}
-
-/* ---------------- SUBTLE DEPTH ---------------- */
-.section::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
-    pointer-events: none;
+    padding: 1vh 2vh;
+    background-color: #fc2a65;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 3vw;
 }
