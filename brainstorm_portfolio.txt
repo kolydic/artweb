@@ -1,5 +1,137 @@
+i will have a text div that slides across the screen when hovering over certain links, containing fragments of reading responses
+
+* arrange according to emotional valence on the screen
+* put inside a maze? 
+* simplistic presentation of only project on otherwise blank page 
+
+
+edits: 
+the inside -- red tint all photos
+spoonhood -- fix the flexbox thing for alt text .. as tooltips or something instead 
+tindytime -- make clearer that it's like rotating between activities, as in a slow moving wheel
+assemblage -- red tint whole page; add freeform text surrounding
+
+------------------------------------------
+
 for portfolio must include reading responses. but any amount can be redacted, and/or it does not necessarily need to be legible 
+
+Grow and develop your ideas per feedback
+creatively implement key concepts and learned techniques
+mindfully address your user 
+expressing both your design vision and ability 
 
 synthesize style: 
     webring index, assemblage base page 
 
+convey deliberate user interaction considerations
+
+
+--------------------------------------------
+
+week 3 reading response: -- assemblage 
+
+This article raises the question:  what kind of place/object can a website be? It also raises the point: the options are as boundless as creativity, and you do not need to follow the logics of the digital attention economy to construct something of value to yourself and others. Creating a website is an act of exploration, a communication of many possible forms, and a dynamic place in the world. The premise of this article is to reimagine the metaphors of the web to expand our imagination of what it is we are free to do, and what it means to create and connect in the web. It is a call to creatively reclaim.  
+
+Questions: 
+
+What does it really mean for something (a website) to be both subject and object? What does it mean for you to be both author and architect? How do such dynamics flow?
+Some of the core work of the Creative Independent is to offer resources on creative anxiety, and this article highlights this. By asking what you want to create as a place in the world, you can disintegrate the trap of the commercialized internet. So, what world do you personally want to make real through its manifestation in your website? 
+
+
+
+week 4 (olia lialina): -- the inside
+
+a jarring vast interconnectedness 
+"their potential audience was greater... than for anyone in the entire history of their genetic line" -- olia lialina, [cite]
+to what extent did they deviate?
+what was coordinated, what was emergent?
+was it created, or was it materialized-- suddenly traceable?
+
+How do web pages get old, and what remains of dead pages/web services? 
+What are the ramifications of "killing" geocities? 
+I found the answer to the first question fascinating-- 
+that this unknown persistant use of the c.gif. 
+The arcane infrastructural quality of this empty file 
+is a reflection of the undeadness of the online world. 
+Almost like new creatures are put together with some old bones where convenient, 
+keeping a secret aliveness of the past. 
+The archive itself captures the aliveness inherent 
+in web building, with its pointers to dynamism in site 
+content (e.g., the "in construction" language/graphics), 
+and its windows to still-living sites beyond the geocities domain. 
+Liliana says that the archive is a counter to our misunderstanding that the web is always in the present, 
+always alive, or always "young."
+But to me, this article proves that, in a way -- 
+the life of the dead continues in its bizarre, 
+branching lineage. 
+
+
+
+
+week 5: marisa olson -- decay
+
+This article is quite cheeky, articulating the meaning of the prefix "post" while critiquing critique. 
+
+What this made me think of is the uncanny representations of the postinternet in distinctively preinternet material forms by Qualeasha Wood: https://news.artnet.com/art-world/qualeasha-wood-tldr-2294975Links to an external site. 
+
+Qualeasha explores what it is to be "chronically online" especially as a queer Black woman, and her tapestries depict the distinctive form of internet hate faced by Black women online: misogynoir as casual comments. 
+
+I'm also thinking of this ad:
+https://www.youtube.com/watch?v=F4WZ_k0vUDM 
+
+depicting the issue of consent and likeness in representing people (namely children) online. This ad comes at the height of nonconsenual pornographic AI depictions of women, girls, and children more broadly, with the likeness of real people. 
+
+These phenomena make me think that we are not truly in the postinternet era -- not yet. Olson talks about the critical awareness that is reflected in the prefix "post." Of the internet, I see that the path to "post" exists, but the critical consciousness of the larger public has yet to really manifest behaviorally. Maybe we are still just in the internet era. 
+
+I'm curious what others think: 
+
+what have you come across that reflects the postinternet?  
+do you agree that we are really in the postinternet? if no, what would take us there? 
+
+
+
+week 7 ---> spoonhood 
+I really liked the exercise where you first describe an image as if you are seeing it for the first time, describing it to a stranger, then again as if to your best friend. I did this with a photo I had taken from my apartment of the snow accumulating outside. These descriptions were vastly different, and it raised questions for me as to why it felt so surprising that they are different. This workbook is really useful for tapping into some important questions -- for example, the questions about when and how to describe identity in alt-text felt really grounding for me. 
+
+One thing I'd like to explore more is: where, really is the line between description and interpretation? An example the authors give from Georgina Kleege is describing a smile vs. the lips turned up at the corners -- how might we play with the performance of objectivity, or with that line between describing and interpreting? 
+
+I am also wondering if anyone else has experience with the app Be My Eyes -- a disability service for sighted people to respond to calls from people with visual impairments for quick support with something visual. I was thinking about my experiences, throughout, of generating alt-text on the spot -- not as a poetic replacement for an image, but as an in-the-moment function. I feel like that makes an interesting difference 
+
+
+
+week 8 --> tindy time?
+This essay exposes the depth of anglocentrism in computer science. I love the endeavor Nasser began, constructing a computer programming language entirely in arabic. however, as he points out, for a programming language to be effective, it must be able to interface with the myriad of ther systems upon which it operates and is meant to affect. 
+
+I found this really depressing, though: "The door to a non-English programming experience is closed now, if it was ever open, and as time passes and more software gets written, it closes tighter still." In my heart, I depend upon a utopianist optimism, and I think.. ultimately.. it just takes more coordination!? Nasser could not rebuild it ALL from scratch himself. If all the Arabic [/ insert any other non-Latin-character language]-speaking computer scientists/ engineers in the world worked together to build a computer system from scratch that operated on only Arabic [or again, insert language], I don't see why it can't be done.
+
+Do all computers / programming tools really need to be able to interface with one another? Nasser raises-- in the section after that depressing quote--  that the question isn't really about how we can build a non-English programming experience, but how we facilitate communication across linguistic boundaries. And I totally get the points he's making, that all the major tools and libraries and systems are built upon English and so this language barrier is a real one, and that it's not the goal to just reproduce everything as-is in a new language. But the idea he does raise -- basically a universal code interpreter -- feels like it would still get stuck in existing power systems. It is a greater outcome of a decolonized world, than a part of the journey, I think. In any case, I love the utopian ideals behind this idea. 
+
+I am wondering though if Nasser's vision of the decolonized programming experience is constrained by the epistemic and ideological norms of globalism (??). I don't know what the ideal is, and I'd be interested in discussing capacity for global integration vs. self-sovereignty as two distinctive trajectories of decolonial efforts and visions. 
+
+
+
+week 10: --> assemblage ?  
+
+I found this chapter really interesting but also perplexing.
+
+Lorusso talks about both this pathway from widespread design legibility (or "democratization" -- a questionable but interesting way to conceptualize modern tech access/legibility) to design professionals as professionals of culture, as well as the rise of design thinking / participatory design ("managerial self-help?") -- but the connections between these phenomena feel a bit fraught. I don't know the history of design thinking, but as a democracy scholar, I know the basic principles have conceptual foundations far predating widespread modern design legibility, and that it emerged along with the popularization of the whole sunstein and thaler bucket of stuff on choice architecture, recognizing the design choices that are implicit everywhere  -- so I'm wondering if this is a fair presentation of design thinking, by construing it as one of the pivots/responses of design workers amidst the de-professionalization/semi-automation of design? 
+
+The components of semi-automation and "template culture" made me think about how in my previous job, my boss asked me to hire a web designer to put a new site together for our lab.. The designer basically just used the Wordpress site builder with a couple tweaks here and there. I had made similar websites for local political campaigns and nonprofits, so it was wild to see someone positioning themselves as a web designer charging thousands for a site like that.. Thinking about the meaning of the design professional made me recall this experience, and it feels like such a distinctly modern and odd situation. In a way, I felt like the web design profession itself was perhaps... too accessible in this template era, where just knowing how to navigate a template builder affords self-credentialing? This experience feels like it touches the problems for design articulated by Lorusso, but in a different specific kind of way. 
+
+discussion Q(s): is it good (? bad? neutral?) that design workers take up the role of cultural professionals, as those with the knowledge and skill and credential to define, create, and  recognize quality? Do you resonate more with the critique of professionalism, that it is exclusionary and limits access to design discourse -- or with the idea that design is a profession built upon "extraordinary knowledge" and so reasonably yields "extraordinary rights and privileges"? ... including, perhaps, the privilege to "steal" vernacular (non-professional) work? 
+
+
+
+week 12: --> absurdity
+
+It is kind of funny to only read scanned text on a screen describing this monumental work, String Games. By the second page, I tried to look up a video, but the internet is too saturated with cat's cradle tutorials. I then got to the line "as a live-transmission performance all that remained of String Games was ephemeral evidence" -- offering that "register of loss" in yet another layer. As words on a page, however, it almost feels like I can imagine the profoundness of the performance, imagining it as enacted beyond what was even really possible--- it's almost like, as history, you can imagine the essence enlivened more richly than its actuality could have really achieved. That is what stories do, I suppose. Which made me question that register of loss--- whether it's there, still, when the ephemeral evidence woven back into this archival narrative gives even more life to the project. Like the interconnected gestures across sites without a real string -- without physical interaction, the "absence" denoted feels both exponentiated in this retelling, but also ... itself eliminated?
+
+(Reminds me of the poem Ausência by Carlos Drummond de Andrade) 
+
+In looking up some references in the text, I came across this project in memory of Lygia Clark: https://www.chankyong.com/lost-performance-memory-of-lygia-clarkLinks to an external site.. This feels like a really rich example of what the author describes Frenkel accomplishing, in realizing "a space in between conceptual and technological affirmations of presence" through both multimodal and embodied interactivity.  
+
+questions: 
+
+What particular absence is loudest for you, reading this piece? What is the absence saying?
+
+What is your "letter X" -- the concept/s that you want to build an archive for, explore deeply, as Frenkel did with her projects on the duality of X ?
