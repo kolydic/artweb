@@ -1,15 +1,20 @@
-i will have a text div that slides across the screen when hovering over certain links, containing fragments of reading responses
-
-* arrange according to emotional valence on the screen
-* put inside a maze? 
-* simplistic presentation of only project on otherwise blank page 
-
 
 edits: 
 the inside -- red tint all photos
 spoonhood -- fix the flexbox thing for alt text .. as tooltips or something instead 
 tindytime -- make clearer that it's like rotating between activities, as in a slow moving wheel
 assemblage -- red tint whole page; add freeform text surrounding
+
+
+TO DO: 
+simplistic page, much like current portfolio
+    i will have a text div that slides across the screen when hovering over certain links, containing fragments of reading responses
+but rename assignments and offer more documentation. 
+kind of like a basic README version of the site. 
+then as a game version, draw on foundations of lauraworld 
+to document the reading responses and have sites 
+engageable via certain sequences that must be uncovered
+
 
 ------------------------------------------
 

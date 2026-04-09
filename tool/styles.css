@@ -90,9 +90,13 @@ body {
 
 
 #solution_hint {
+    display: inline-flex;
     animation: fadeIn 3s ease forwards;
     animation-delay: 1s;
     opacity: 0;
+    justify-content: center;
+    align-items: center;
+
 }
 
 @keyframes fadeIn {
@@ -107,7 +111,6 @@ body {
 
 .arrowdown {
   position: relative;
-  left: 40%;
   width: 0px;
   height: 0px;
   border-bottom: 5vw solid transparent;
@@ -163,6 +166,31 @@ body {
 /* source for radio behavior: https://stackoverflow.com/questions/61461393/how-can-i-show-messages-depending-on-selected-radio-buttons */
 
 
+#remaining_page {
+    display: none;
+}
+
+
+#lines:has([type="radio"]:checked) ~ #remaining_page{
+  display: inline-block;
+}
+
+
+#introduce_app {
+    display: inline-flex;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#diagram {
+    height: 80vh;
+}
 /* ---------------- testimonials ---------------- */
 
 #testimonials_block {
@@ -171,6 +199,15 @@ body {
     align-items: center;
     gap: 2vh;
 }   
+
+
+#testimonials_flex {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .testimonial {
     background-color: #7a9bd3;
