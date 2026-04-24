@@ -1,9 +1,9 @@
 
 edits: 
-the inside -- red tint all photos
-spoonhood -- fix the flexbox thing for alt text .. as tooltips or something instead 
+the inside -- red tint all photos 
+x spoonhood -- fix the flexbox thing for alt text .. as tooltips or something instead 
 tindytime -- make clearer that it's like rotating between activities, as in a slow moving wheel
-assemblage -- red tint whole page; add freeform text surrounding
+x assemblage -- red tint whole page; add freeform text surrounding
 
 
 TO DO: 

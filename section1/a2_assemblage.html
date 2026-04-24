@@ -3,6 +3,7 @@
 
 <style>
 
+
 #wrapper {
   position: relative;
   width: 800px;
@@ -670,6 +671,21 @@ thanks to grey for helping me code this
     left: 15px;
     top: 10px;
 }
+
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Replace with your choice: rgba(R, G, B, Alpha) */
+  background-color: rgba(106, 8, 8, 0.5); 
+  z-index: 9999;
+  pointer-events: none; /* Allows users to click elements underneath */
+}
+
 
 </style>
 

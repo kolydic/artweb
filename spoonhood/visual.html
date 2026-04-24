@@ -93,22 +93,29 @@ input[type=range]::-ms-thumb {
     font-size: 3vh;
 }
 
-
 .spoondiv {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
+
 
 .altdiv {
-    display: none;
-    flex-direction: column;
-    align-items: left;
-    max-width: 250px;
+  visibility: hidden;  
+  position: absolute;
+  background-color: black;
+  max-width: 250px;
+  color: rgb(250, 205, 205);
+  text-align: left;
+  padding: 7px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;  
 }
 
-.spoondiv:hover + .altdiv {
-    display: flex;
+.spoondiv:hover > .altdiv {
+  visibility: visible;
 }
 
 #imgcontainer {
@@ -313,8 +320,10 @@ input[type="checkbox"] {
             <input id="radio1_7" type="radio" name="radio1in" value="7">
             <label for="radio1_7" class="range-label end-label">yes, very spoon</label>
         </div>
+        
+        <div class="altdiv" id="alt1">a clay artefact with a curling handle, much like the curled tail of a cartoon pig. The head of this artefact flattens out to a wide edge, sort of like a wooden spatula.</div>
+
     </div>
-    <div class="altdiv" id="alt1">a clay artefact with a curling handle, much like the curled tail of a cartoon pig. The head of this artefact flattens out to a wide edge, sort of like a wooden spatula.</div>
 
 
     <div id="spoon2" class="spoondiv">
@@ -336,8 +345,9 @@ input[type="checkbox"] {
             <input id="radio2_7" type="radio" name="radio2in" value="7">
             <label for="radio2_7" class="range-label end-label">yes, very spoon</label>
         </div>
+        <div class="altdiv" id="alt2">a long red clay artefact with a handle that curls up and over itself, like the tail of a scorpion. Its head is slightly wider, rounded, and mostly carved out.</div> 
+
     </div>  
-    <div class="altdiv" id="alt2">a long red clay artefact with a handle that curls up and over itself, like the tail of a scorpion. Its head is slightly wider, rounded, and mostly carved out.</div> 
 
     <div id="spoon3" class="spoondiv">
         <img src="is_spoon/3.png" 
@@ -358,8 +368,9 @@ input[type="checkbox"] {
             <input id="radio3_7" type="radio" name="radio3in" value="7">
             <label for="radio3_7" class="range-label end-label">yes, very spoon</label>
         </div>
+        <div class="altdiv" id="alt3">a red clay artefact that looks like a rectangular block with rounded edges, slightly wider than it is tall. A small hole has been carved out on the longer top surface, centered close to the edge.</div> 
+
     </div>
-    <div class="altdiv" id="alt3">a red clay artefact that looks like a rectangular block with rounded edges, slightly wider than it is tall. A small hole has been carved out on the longer top surface, centered close to the edge.</div> 
 
     <div id="spoon4" class="spoondiv">
         <img src="is_spoon/4.png" 
@@ -380,8 +391,9 @@ input[type="checkbox"] {
             <input id="radio4_7" type="radio" name="radio4in" value="7">
             <label for="radio4_7" class="range-label end-label">yes, very spoon</label>
         </div>
+        <div class="altdiv" id="alt4">a long red clay artefact, widest at its middle, but it has a small widened end, which has a tiny divot (more, perhaps, like a light dent) on its surface. it is rumored to look like a fat blunt, but I personally disagree.</div>
+
     </div>
-    <div class="altdiv" id="alt4">a long red clay artefact, widest at its middle, but it has a small widened end, which has a tiny divot (more, perhaps, like a light dent) on its surface. it is rumored to look like a fat blunt, but I personally disagree.</div>
 
     <div id="spoon5" class="spoondiv">
         <img src="is_spoon/5.png" 
@@ -402,8 +414,9 @@ input[type="checkbox"] {
             <input id="radio5_7" type="radio" name="radio5in" value="7">
             <label for="radio5_7" class="range-label end-label">yes, very spoon</label>
         </div>
+        <div class="altdiv" id="alt5">a red clay artefact with a squiggly handle, like a sidewinding snake, and a long hollow head, like a pitcher plant.</div>
+
     </div>
-    <div class="altdiv" id="alt5">a red clay artefact with a squiggly handle, like a sidewinding snake, and a long hollow head, like a pitcher plant.</div>
 
     <div id="spoon6" class="spoondiv">
         <img src="is_spoon/6.png" 
@@ -424,8 +437,9 @@ input[type="checkbox"] {
             <input id="radio6_7" type="radio" name="radio6in" value="7">
             <label for="radio6_7" class="range-label end-label">yes, very spoon</label>
         </div>
+        <div class="altdiv" id="alt6">a red clay artefact with a long, straight handle. The head of this artefact is like a donut with a big hollow middle, pinched at one end where it meets the handle.</div>
+
     </div>
-    <div class="altdiv" id="alt6">a red clay artefact with a long, straight handle. The head of this artefact is like a donut with a big hollow middle, pinched at one end where it meets the handle.</div>
 
     <div id="spoon7" class="spoondiv">
         <img src="is_spoon/7.png" 
@@ -446,8 +460,9 @@ input[type="checkbox"] {
             <input id="radio7_7" type="radio" name="radio7in" value="7">
             <label for="radio7_7" class="range-label end-label">yes, very spoon</label>
         </div>
+        <div class="altdiv" id="alt7">Magritte's famous painting of a pipe.</div>
+
     </div>
-    <div class="altdiv" id="alt7">Magritte's famous painting of a pipe.</div>
 
 </div>
 
