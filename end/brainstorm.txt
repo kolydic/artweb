@@ -11,8 +11,6 @@ further interactivity with pseudo-class selectors
     :hover, :active, :focus, :target, :not(), :has()
 
 
-
-
 v2 
 for reference in critique 
 https://editor.p5js.org/kolydic/sketches/40D8FJwuT
