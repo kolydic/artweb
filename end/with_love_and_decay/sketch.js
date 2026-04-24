@@ -62,8 +62,7 @@ function draw() {
   // just love him, a little 
   // as if your own ritual can heal the grandfathers of a wendigo
   // as if there is nothing truly evil 
-  // as if play is the only business 
-  // and caring the only act
+  // as if childhood can't end 
   decay(px, py);
   decay(px+1, py);
   decay(px+1, py+1);
