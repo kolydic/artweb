@@ -34,9 +34,16 @@
 
     <pre><code class="language-javascript" id="text_div">
 
-    
+      function mouseClicked() {
+        //upon mouse click within image/sketch, get position 
+        px = mouseX;
+        py = mouseY;
+        // initialize decay
+        decaying = true;
+      }
+
       function draw() {
-        
+      
         // if we're not decaying, just move along, keep drawing nothing
         if (!decaying) return; 
         
