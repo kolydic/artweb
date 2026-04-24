@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js">
+      // use highlight.js to present code as color-formatted 
+    </script>
+    <script>hljs.highlightAll();</script>
+    
+    <meta charset="utf-8">
+
+
+  </head>
+
+  <style>
+
+    #text_div {
+      left: 20px;
+      width: 70%;
+    }
+
+    code, pre {
+    white-space: pre-wrap;
+    height: 60vh;
+    
+    }
+
+  </style>
+  <body>
+
+    <pre><code class="language-javascript" id="text_div">
+
+    
+      function draw() {
+        
+        // if we're not decaying, just move along, keep drawing nothing
+        if (!decaying) return; 
+        
+        // set image boundaries as stopping points b/c px and py 
+        // (point x and y of mouseclick) iterate in random walk; 
+        // prevent infinite loop outside image 
+        if (px < 0 || px >= img.width || py < 0 || py >= img.height) {
+            decaying = false;
+            return;
+          }
+        
+        // otherwise, if we decay, we decay the whole neighborhood. 
+        // then the decay spreads to a new neighborhood. and then a new one. and then a new one. there is nothing that can stop the decay from spreading. not until the decay leaves YOu, leaves your memory alone, grows bored of rotting your childhood. the decay leaves, but once you touch the memory again, the decay knows, it knows from anywhere, and it is with you again. the decay knows how to smell the nostalgia in your exhalation, the remembering of a dream in the sweat you shed in your sleep. the decay will eat the playful right out of your own belly, the decay itself -- it knows how to play, it plays too 
+        // did you know the decay is lonely, too 
+        // the decay it waits like a coyote outside your home at night 
+        // resting its jaw in a bored but focused waiting upon the headstone of a 
+        // young man who got blown into pieces in afghanistan 
+        // the decay remembers him, the taste of his regret 
+        // as he knew that this whole thing was a mistake, there is no honor in this thing called war
+        // and the decay knows every sort of war, 
+        // knows yours 
+        // and your father's, and your brother's 
+        // and that cousin that decayed in smile first, 
+        // and has his own grave and his own flavor, just like the young soldier 
+        // the decay waits there for you, knows just when to take one small step closer 
+        // but waiting in such a quiet place made decay feel a little bit softer
+        // and decay likes to hear you sing to yourself at night 
+        // and decay really is just so hollow inside, waiting, fucking always waiting for you to notice and just once 
+        // if you would sing to him, that might be all he wants now 
+        // he's lonely too, he has his own gods, 
+        // like every universe is superimposed, like a thin membrane clung tight to the dusty shell that encapsulates a concept we think we know 
+        // do you really not hear him crying? he is crying too 
+        // just love him, a little 
+        // as if your own ritual can heal the grandfathers of a wendigo
+        // as if there is nothing truly evil 
+        // as if play is the only business 
+        // and caring the only act
+        decay(px, py);
+        decay(px+1, py);
+        decay(px+1, py+1);
+        decay(px, py+1);
+        decay(px-1, py+1);
+        decay(px-1, py);
+        decay(px-1, py-1);
+        decay(px, py-1);
+        decay(px+1, py-1);
+        
+        px += random(-10, 10);
+        py += random(-10, 10);
+        
+
+      }
+
+      // what it is to decay
+      function decay (px, py) {
+        
+        let c = img.get(px, py);
+        //// find the flavor of that moment you brush against 
+        push();
+          //// go there, go closer 
+        //// go tilt your head and look carefully 
+          translate(px, py);
+          rotate(radians(random(360)));
+          noFill();
+        //// let me touch it through you, the color of your past 
+          stroke(c);
+        //// and let me snag a claw into this moment, and twist like a 
+        // dragon's beard to my lips 
+          strokeWeight(random(0.5, 2));
+          curve(
+            px, py,
+            random(-30, 30), random(-30, 30),
+            random(-10, 10),  random(-10, 10),
+            random(-60, 60),  random(-60, 60)
+          );
+        pop();
+      //  again, again, again
+      }
+
+    </code></pre>
+    </div>
+    
+    <div id="sketch_div"><script src="sketch.js"></script> </div>
+  
+
+</body></html>

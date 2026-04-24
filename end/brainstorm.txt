@@ -1,0 +1,20 @@
+generative design x
+
+use functions, loops, conditionals x
+
+conditional loops (for, if/else, while) with randomly defined parameters or arguments x 
+unique design each time a user loads the page x 
+
+object or element that is changed or manipulated by user feedback x 
+
+further interactivity with pseudo-class selectors
+    :hover, :active, :focus, :target, :not(), :has()
+
+
+
+
+v2 
+for reference in critique 
+https://editor.p5js.org/kolydic/sketches/40D8FJwuT
+
+version 3 was the final, including the random walk, bc the random walk inspired the comment-poem. 
