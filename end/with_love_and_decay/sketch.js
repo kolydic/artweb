@@ -25,6 +25,11 @@ function setup() {
   cnv = createCanvas(img.width, img.height);  // center and then draw image 
   cnv.position(.75*windowWidth, .3*windowHeight);
   image(img, 0, 0);
+
+  cnv.parent('sketch_div');  
+  cnv.mouseClicked(() => {
+    document.getElementById('sketch_div').classList.toggle('active');
+  });
 }
 
 function draw() {

@@ -29,6 +29,62 @@
     
     }
 
+    #shouts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      font-size: 30px;
+      font-family: 'Courier New', Courier, monospace;
+      z-index: -1;
+      color: rgba(127, 44, 44, 0.1);
+      visibility: hidden;
+    }
+
+    .shouts_a {
+      position: relative;
+      top: 0;
+      right: calc(52vw + 1rem);
+      width: 50px;
+      text-align: right;
+    }
+
+    .shouts_b {
+      position: relative;
+      top: 0;
+      left: -50px;
+      width: 40vw;
+      text-align: left;
+    }
+
+    #sketch_div:active ~ #shouts .shouts_a {
+    visibility: visible;
+    animation: floatA 2s linear forwards;
+    }
+    
+    #sketch_div:active ~ #shouts .shouts_b  {
+    visibility: visible;
+    animation: floatB 2s linear forwards;
+    }
+    
+    #sketch_div:not(:active) ~ #shouts  {
+    visibility: hidden;
+    }
+    
+
+    @keyframes floatA {
+        0% { transform: translateX(0px);}
+        100% { transform: translateX(-200vw);}
+    }
+
+    @keyframes floatB {
+        0% { transform: translateX(0px);}
+        100% { transform: translateX(200vw);}
+    }
+
+
+
   </style>
   <body>
 
@@ -128,7 +184,39 @@
     </code></pre>
     </div>
     
-    <div id="sketch_div"><script src="sketch.js"></script> </div>
+    <div id="sketch_div" tabindex="0"><script src="sketch.js"></script> </div>
   
+    <div id="shouts">
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_a">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+      <div class="shouts_b">I///TOUCH//MEMORY///CANNOT//TOUCH//MEMORY/////SNAG//CLAWS///ON//MEMORY////I//DECAY//////MEMORY////I////DECAY///CHILD</div>
+    </div>
 
 </body></html>
