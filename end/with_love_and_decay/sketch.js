@@ -22,9 +22,11 @@ function mouseClicked() {
 
 
 function setup() {
-  cnv = createCanvas(img.width, img.height);  // center and then draw image 
-  cnv.position(.75*windowWidth, .3*windowHeight);
-  image(img, 0, 0);
+  cnv = createCanvas(img.width, img.height+50);  // center and then draw image 
+  cnv.position(.75*windowWidth, .3*windowHeight+50);
+  textFont('Courier New');
+  text('CLICK ON THE CHILD vvv PLEASE PLEASE PLEASE', 0, 20);
+  image(img, 0, 30);
 
   cnv.parent('sketch_div');  
   cnv.mouseClicked(() => {
