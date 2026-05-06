@@ -20,6 +20,7 @@ then as a game version, draw on foundations of lauraworld
 to document the reading responses and have sites 
 engageable via certain sequences that must be uncovered
 
+https://stackoverflow.com/questions/37625952/generating-a-maze-with-javascript-canvas
 
 ------------------------------------------
 

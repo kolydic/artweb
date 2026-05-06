@@ -119,10 +119,13 @@ function draw() {
   let s = second();
   
   // for testing
-  //let h = 14; // TEST 10:12 FOR LONGEST, 14:12 FOR SHORTEST
-  //let m = 13;
+  // let h = 10; // TEST 10:12 FOR LONGEST, 14:12 FOR SHORTEST
+  // let m = 12;
         
   let [thenowbehavior, behaviorStart, duration, behPrev, behNext] = getDescriptionForTime(h, m);
+  
+  textSize(9);
+  text("NOW:", width/2 - 170, height/2 - 130);
   
   // set font size calc  
   let maxSize = 24; 
@@ -143,25 +146,29 @@ function draw() {
   let curSecPerc = map(curSec, 0, durSec, 0, 100);
   
   push();
-    translate(width/2 - 50, height/2 + 30);
+    translate(width/2 - 50, height/2 + 25);
     stroke(0);
     noFill();
     rect(0,0,100,30);
   
     stroke(0);
     fill(0);
+    textSize(9);
+    text("[REMAINING]", 20, -5);
     rect(0,0,curSecPerc, 30);
   
     // prev behavior 
     textSize(9);
     let nCharPrev = behPrev.length;
-    let yposPrev = (nCharPrev*2)/120;
+    let yposPrev = (nCharPrev*2)/120 + 40;
+    text("PREVIOUS:", -110, yposPrev - 20, 110);
     text(behPrev, -110, yposPrev, 110);
   
     // next behavior
     let nCharNext = behNext.length;
-    let yposNext = (nCharNext*2)/120;
-    text(behNext, 115, yposNext, 110)
+    let yposNext = (nCharNext*2)/120 + 40;
+    text("NEXT:", 125, yposNext - 20, 110);
+    text(behNext, 125, yposNext, 110);
   pop();
   
   push();
